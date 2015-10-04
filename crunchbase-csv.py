@@ -15,7 +15,7 @@ def crunchbase_csv_export(filename):
             'acquired_month', 'acquired_quarter', 'acquired_year',
             'founded_month', 'founded_quarter', 'founded_year',
             'funded_month', 'funded_quarter', 'funded_year'}
-        with open('%s.csv' % sheet_name, 'wb') as f:
+        with open('%s.csv' % sheet_name.lower(), 'wb') as f:
             csv_out = unicodecsv.writer(f)
             for row in sheet.rows:
                 values = []
