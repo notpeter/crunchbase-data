@@ -1,4 +1,5 @@
 import argparse
+import re
 import unicodecsv
 import openpyxl
 
@@ -22,8 +23,8 @@ def crunchbase_csv_export(filename):
                 for cell in row:
                     # There must be a simpler way to get the column header for a cell
                     if header[ord(cell.column)-65] not in ignore_columns:
-                        if isinstance(cell.value, basestring) and cell.value.startswith('1000-'):
-                            #print "%s: Likely invalid date: %s" % (cell.coordinate, cell.value)
+                        if isinstance(cell.value, basestring) and re.match(r'^(1000|0[0-2]\d\d)-', cell.value):
+                            print "%s: Likely invalid date: %s" % (cell.coordinate, cell.value)
                             val = None
                         elif hasattr(cell.value, 'date'):
                             val = cell.value.date() # converts datetime to date
