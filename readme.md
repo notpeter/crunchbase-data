@@ -17,8 +17,9 @@ The Excel workbook is transformed as follows:
 
 ## Usage
 
+    virtualenv .venv && source ~/.venv/bin/activate
     pip install -r requirements.txt
-    python crunchbase-csv.py
+    python crunchbase-csv.py crunchbase_export.xlsx
 
 ## License
 
