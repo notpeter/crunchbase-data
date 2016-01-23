@@ -1,0 +1,2 @@
+openpyxl>=2.2.6
+unicodecsv>=0.14.1
