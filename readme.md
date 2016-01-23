@@ -1,7 +1,7 @@
 
 # Crunchbase Data As CSV
 
-This data was extracted from the [Crunchbase Data Export](http://info.crunchbase.com/about/crunchbase-data-exports/).
+This data was extracted from the December 4, 2015 [Crunchbase Data Export](http://info.crunchbase.com/about/crunchbase-data-exports/).
 
 This repository includes unofficial CSV exports derived from the individual worksheets
 from crunchbase_export.xlsx. I previously munged the data by hand with Excel,
